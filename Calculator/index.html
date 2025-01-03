@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <p class="answer"></p>
+    <div class="num-div">
+    <p>
+        <button onclick="calculation+='1';textBox();" class="calc-btn">1</button>
+        <button onclick="calculation+='2';textBox();" class="calc-btn">2</button>
+        <button onclick="calculation+='3';textBox();" class="calc-btn">3</button>
+        <button onclick="calculation+=' + ';textBox();" class="calc-btn sym-btn">+</button>
+    </p>
+    <p>
+        <button onclick="calculation+='4';textBox();" class="calc-btn">4</button>
+        <button onclick="calculation+='5';textBox();" class="calc-btn">5</button>
+        <button onclick="calculation+='6';textBox();" class="calc-btn">6</button>
+        <button onclick="calculation+=' - ';textBox();" class="calc-btn sym-btn">-</button>
+    </p>
+    <p>
+        <button onclick="calculation+='7';textBox();" class="calc-btn">7</button>
+        <button onclick="calculation+='8';textBox();" class="calc-btn">8</button>
+        <button onclick="calculation+='9';textBox();" class="calc-btn">9</button>
+        <button onclick="calculation+=' * ';textBox();" class="calc-btn sym-btn">*</button>
+    </p>
+    <p>
+        <button onclick="calculation+='0';textBox();" class="calc-btn">0</button>
+        <button onclick="calculation+='.';textBox();" class="calc-btn">.</button>
+        <button class="calc-btn" onclick="calculation = eval(calculation); document.querySelector('.answer').innerHTML = `${calculation}`;localStorage.setItem('calculation', JSON.stringify(calculation));">=</button>
+        <button onclick="calculation+=' / ';textBox();" class="calc-btn sym-btn">/</button>
+    </p>
+    <p>
+        <button onclick="calculation = '';textBox();" class="calc-btn clear-btn">clear</button>
+    </p>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
